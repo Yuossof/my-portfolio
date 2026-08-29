@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import myImg from "../assets/WhatsApp Image 2026-02-14 at 2.12.56 PM.jpeg";
+import Grainient from "./Grainient";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,6 +148,14 @@ const About = () => {
                 src={myImg}
                 alt="Youssof"
                 className="w-full h-full object-cover"
+                // style={{ filter: "grayscale(1) contrast(1.3)" }}
+              />
+              <div
+                className="absolute inset-0 pointer-events-none mix-blend-multiply opacity-50"
+                style={{
+                  backgroundImage: "radial-gradient(rgba(0,0,0,0.85) 30%, transparent 31%)",
+                  backgroundSize: "4px 4px",
+                }}
               />
             </div>
             <div className="about-badge absolute bottom-4 left-4 bg-background/90 backdrop-blur px-4 py-2 rounded-full text-sm font-medium border border-border shadow-lg flex items-center gap-2">
@@ -172,8 +181,55 @@ const About = () => {
               </p>
             </div>
 
+            <div className="relative h-[400px] w-full rounded-2xl overflow-hidden flex items-start justify-start p-6">
+              <div className="absolute inset-0 z-0">
+                <Grainient
+                  color1="#140a35"
+                  color2="#0e0530"
+                  color3="#2f134a"
+                  timeSpeed={0.25}
+                  colorBalance={0}
+                  warpStrength={1}
+                  warpFrequency={5}
+                  warpSpeed={2}
+                  warpAmplitude={50}
+                  blendAngle={0}
+                  blendSoftness={0.05}
+                  rotationAmount={500}
+                  noiseScale={2}
+                  grainAmount={0.1}
+                  grainScale={2}
+                  grainAnimated={false}
+                  contrast={1.5}
+                  gamma={1}
+                  saturation={1}
+                  centerX={0}
+                  centerY={0}
+                  zoom={0.9}
+                />
+              </div>
+
+              <div className="relative z-10  rounded-2xl p-6 w-full max-w-md">
+                <span className="text-sm text-gray-400 block mb-4">What I Do</span>
+                <ul className="space-y-2 text-gray-200">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                    Web Development
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                    UI/UX Implementation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                    Responsive Design
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             {/* Tech Card */}
-            <div className="about-card about-stack bg-muted rounded-2xl p-8 flex-1">
+            {/* <div className="about-card about-stack bg-muted rounded-2xl p-8 flex-1">
               <span className="text-sm text-muted-foreground block mb-4">
                 Technologies
               </span>
@@ -187,7 +243,7 @@ const About = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
