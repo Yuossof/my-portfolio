@@ -3,7 +3,7 @@ import { Componentx } from "./CursorEffect";
 
 const Footer = () => {
   const year = new Date().getFullYear()
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div ref={containerRef} className="relative w-full h-full">

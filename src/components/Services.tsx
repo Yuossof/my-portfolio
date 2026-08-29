@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Layers, Monitor, Zap } from 'lucide-react'
+import {Code2, Layers, Monitor, Zap } from 'lucide-react'
 
 const ServicesMasonry = () => {
   const services = [
