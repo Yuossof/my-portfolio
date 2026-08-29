@@ -6,7 +6,7 @@ const Hero = () => {
             {/* Cursor Grid Background */}
             <div className="absolute inset-0 z-0">
                 <CursorGrid
-                    cellSize={70}
+                    cellSize={30}
                     color="#b93bcc"
                     radius={110}
                     falloff="smooth"
