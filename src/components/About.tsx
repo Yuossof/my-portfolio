@@ -7,8 +7,6 @@ import Grainient from "./Grainient";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stack = ["React", "JavaScript", "Tailwind CSS", "Node.js", "Git"];
-
 const About = () => {
   const root = useRef(null);
 
