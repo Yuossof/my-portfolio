@@ -1,211 +1,142 @@
 [
-    {
-        "id": "z-group-real-estate-cms",
-        "title": "Z Group — Bilingual Real Estate Corporate Website & CMS",
-        "category": "Real Estate Platform",
-        "summary": "A bilingual (EN/AR) corporate website and admin content management system that lets a real estate development company autonomously manage projects, marketing pages, and leads.",
-        "description": "Z Group is a full digital ecosystem for a premier real estate developer, combining a public marketing site with a private admin console. Visitors can browse active, upcoming, and previous projects with galleries, floor plans, amenities, location maps, and construction timelines; submit project inquiries, register interest on landing pages, and apply for careers. The authenticated admin dashboard gives the marketing team complete control over project listings, a modular drag-and-drop landing page builder, every site section and SEO setting, and all form submissions — removing the need for developer intervention for every content change.",
-        "techStack": [
-            "Next.js 16 (App Router)",
-            "React 19",
-            "TypeScript",
-            "Tailwind CSS 4",
-            "Express 5",
-            "Node.js",
-            "MongoDB (native driver)",
-            "PostgreSQL (pg)",
-            "next-intl",
-            "Zod",
-            "react-hook-form",
-            "react-quill-new (Quill)",
-            "Embla Carousel",
-            "Framer Motion",
-            "Lucide React",
-            "SheetJS (xlsx)",
-            "jsonwebtoken",
-            "bcrypt",
-            "Multer",
-            "Winston",
-            "cookie-parser",
-            "compression",
-            "cors"
-        ],
-        "coverImage": "https://res.cloudinary.com/dnf0l0893/image/upload/v1786817171/Screenshot_2026-08-15_210543_gzktgx.png",
-        "gallery": [
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_152913_jkib4g.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822055/Screenshot_2026-07-19_153936_woqli3.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822054/Screenshot_2026-07-19_154003_wj3vid.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822060/Screenshot_2026-07-19_153806_ebo82s.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822050/Screenshot_2026-07-19_153813_zr973v.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822049/Screenshot_2026-07-19_153820_jhiuyi.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153835_h3sa6w.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153846_ubqdm8.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153721_jq5ahp.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822051/Screenshot_2026-07-19_153732_f78vko.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822046/Screenshot_2026-07-19_153749_yezk9l.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822046/Screenshot_2026-07-19_153742_cpflgz.png",
-            "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822045/Screenshot_2026-07-19_154030_tafsnh.png"
-        ],
-        "featured": true,
-        "highlights": [
-            "Engineered a modular, typed section-based landing page builder (hero, stats, content, features, gallery, CTA) with reorder/enable/disable controls persisted as a typed union of MongoDB models.",
-            "Built a custom weighted SEO scoring engine (SeoAnalyzer) with 8 rule checkers (title, description, headings, keyword density, images, URL, content structure, readability) that scores and recommends fixes for both English and Arabic content.",
-            "Designed a bilingual-first data model with localized {en, ar} strings throughout, an RTL-aware frontend, and an aggregated analytics dashboard powered by MongoDB aggregation pipelines across 11 collections."
-        ],
-        "features": [
-            "Bilingual public site (English/Arabic) with next-intl i18n, locale routing, and RTL support",
-            "Project portfolio with gallery images/videos, floor plans, amenities, nearby places, partner logos, and location maps",
-            "Under-construction project pages with construction progress timelines and image sets",
-            "Previous projects showcase with reorderable item management",
-            "Admin dashboard with portfolio stats, donut/bar charts, recent activity, and quick actions",
-            "Drag-and-drop landing page builder with modular content sections and draft/publish workflow",
-            "Site settings manager for home, about, milestones, achievement video, footer, and page SEO",
-            "Integrated real-time SEO analyzer with weighted scores and actionable recommendations",
-            "Form submission management for project inquiries, landing page interest, careers (CV upload), and about-us contacts",
-            "JWT-based admin authentication with bcrypt password hashing and admin-only RBAC middleware"
-        ],
-        "challenges": [
-            "Modeling a flexible yet type-safe section-based page system: a discriminated union of section models (Hero, Stats, Content, Features, Gallery, CTA) with per-section props, ordering, and enabled flags on both the API and the client renderer.",
-            "Implementing a locale-aware weighted SEO analysis engine that evaluates content quality independently for English and Arabic, computing a live score from passed/total rule weights and surfacing severity-ranked issues in the editor.",
-            "Orchestrating a single aggregated dashboard endpoint that concurrently counts, trends, and snapshots data across 11 MongoDB collections using Promise.all and aggregation pipelines while keeping consistent response shapes for the charting UI."
-        ],
-        "architecture": "Next.js 16 App Router frontend with next-intl locale routing (en/ar) and RTL support, consuming an Express 5 REST API backed by MongoDB (native driver) for content with PostgreSQL via pg for relational data. JWT access tokens in httpOnly cookies with bcrypt hashing protect admin routes, Multer handles media/CV uploads served as static files, and Zod validates all payloads.",
-        "role": "Full-Stack Developer",
-        "links": {
-            "live": "",
-            "github": ""
-        }
-    },
-    {
-        "id": "pulse-dashboard",
-        "title": "Pulse Dashboard",
-        "category": "Analytics",
-        "summary": "A performance analytics dashboard for marketing teams tracking campaign performance in real time.",
-        "description": "Pulse Dashboard centralizes performance data for product, sales, and marketing teams. It offers live KPI monitoring, trend analysis, and exportable reports so teams can act quickly on shifts across channels and conversion funnels.",
-        "techStack": [
-            "React",
-            "TypeScript",
-            "Node.js",
-            "Charts",
-            "PostgreSQL"
-        ],
-        "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
-        ],
-        "featured": true,
-        "highlights": [
-            "Implemented live KPI widgets with fast refresh and trend comparisons.",
-            "Built event-based filters to let teams isolate campaign performance by source and segment.",
-            "Created exportable reports that updated the business review workflow."
-        ],
-        "features": [
-            "Live dashboard widgets with real-time data refresh",
-            "Campaign breakdowns by traffic source and conversion rate",
-            "Custom time-range filters and exportable reports",
-            "Shared team views with role-based permissions"
-        ],
-        "challenges": [
-            "Handling large analytics datasets without sacrificing responsiveness.",
-            "Designing a consistent dashboard language across multiple business teams.",
-            "Reducing noise in campaign data while preserving the ability to drill down."
-        ],
-        "architecture": "React dashboard frontend, Node.js ingestion service, PostgreSQL data layer, and charting utilities for live reporting.",
-        "role": "Full-stack engineer focused on product analytics and dashboard UX.",
-        "links": {
-            "live": "https://example.com/pulse-dashboard",
-            "github": "https://github.com/example/pulse-dashboard"
-        }
-    },
-    {
-        "id": "orbit-taskflow",
-        "title": "Orbit TaskFlow",
-        "category": "Productivity",
-        "summary": "A collaborative task and workflow management app for growing product teams.",
-        "description": "Orbit TaskFlow helps distributed teams plan work, keep priorities aligned, and move projects from kickoff to delivery. With task boards, sprint tracking, and real-time updates, it gives teams clarity without adding operational friction.",
-        "techStack": [
-            "React",
-            "Firebase",
-            "TypeScript",
-            "Node.js",
-            "Tailwind"
-        ],
-        "coverImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-        ],
-        "featured": true,
-        "highlights": [
-            "Designed an interactive team workflow that encouraged momentum across multiple projects.",
-            "Enabled live updates for comments, status changes, and assignee actions.",
-            "Built sprint planning views that keep execution and reporting aligned."
-        ],
-        "features": [
-            "Kanban board with drag-and-drop task updates",
-            "Sprint planning with due date tracking and visibility",
-            "Real-time sync across team members and comments",
-            "Automated reminders and activity feed"
-        ],
-        "challenges": [
-            "Balancing a light interface with rich workflow detail.",
-            "Supporting team collaboration without creating noisy activity streams.",
-            "Preserving fast UX when project data changed frequently."
-        ],
-        "architecture": "React front end with Firebase real-time syncing, TypeScript models, and modular board state management.",
-        "role": "Product engineer and UI architect.",
-        "links": {
-            "live": "https://example.com/orbit-taskflow",
-            "github": "https://github.com/example/orbit-taskflow"
-        }
-    },
-    {
-        "id": "harbor-logistics",
-        "title": "Harbor Logistics",
-        "category": "Logistics",
-        "summary": "A logistics management system for tracking shipments, inventory, and fulfillment performance.",
-        "description": "Harbor Logistics provides a complete operational view for shipping teams managing warehouse movement and delivery schedules. It simplifies routing, order handoff, and shipment visibility while delivering clean reporting to support business decisions.",
-        "techStack": [
-            "Next.js",
-            "MongoDB",
-            "Node.js",
-            "API",
-            "Tailwind"
-        ],
-        "coverImage": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-        ],
-        "featured": false,
-        "highlights": [
-            "Added live shipment milestones and status tracking for faster operational updates.",
-            "Designed a warehouse dashboard to visualize fulfillment flow and bottlenecks.",
-            "Connected orders and inventory data to support stronger delivery planning."
-        ],
-        "features": [
-            "Shipment tracking and milestone event logging",
-            "Warehouse inventory sync across multiple locations",
-            "Driver assignment and delivery route insights",
-            "Operational dashboards for SLA and fulfillment health"
-        ],
-        "challenges": [
-            "Reducing signal noise across many moving shipment events.",
-            "Connecting fulfillment data across disconnected operational tools.",
-            "Providing actionable insights without overwhelming operational teams."
-        ],
-        "architecture": "Next.js app shell, Node.js API services, MongoDB operational datasets, and dashboard views for live supply chain monitoring.",
-        "role": "Full-stack engineer leading operational tooling and UI design.",
-        "links": {
-            "live": "https://example.com/harbor-logistics",
-            "github": "https://github.com/example/harbor-logistics"
-        }
+  {
+    "id": "z-group-real-estate-cms",
+    "title": "Z Group — Bilingual Real Estate Corporate Website & CMS",
+    "category": "Real Estate Platform",
+    "summary": "A bilingual (EN/AR) corporate website and admin content management system that lets a real estate development company autonomously manage projects, marketing pages, and leads.",
+    "description": "Z Group is a full digital ecosystem for a premier real estate developer, combining a public marketing site with a private admin console. Visitors can browse active, upcoming, and previous projects with galleries, floor plans, amenities, location maps, and construction timelines; submit project inquiries, register interest on landing pages, and apply for careers. The authenticated admin dashboard gives the marketing team complete control over project listings, a modular drag-and-drop landing page builder, every site section and SEO setting, and all form submissions — removing the need for developer intervention for every content change.",
+    "techStack": [
+      "Next.js 16 (App Router)",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Express 5",
+      "Node.js",
+      "MongoDB (native driver)",
+      "PostgreSQL (pg)",
+      "next-intl",
+      "Zod",
+      "react-hook-form",
+      "react-quill-new (Quill)",
+      "Embla Carousel",
+      "Framer Motion",
+      "Lucide React",
+      "SheetJS (xlsx)",
+      "jsonwebtoken",
+      "bcrypt",
+      "Multer",
+      "Winston",
+      "cookie-parser",
+      "compression",
+      "cors"
+    ],
+    "coverImage": "https://res.cloudinary.com/dnf0l0893/image/upload/v1786817171/Screenshot_2026-08-15_210543_gzktgx.png",
+    "gallery": [
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_152913_jkib4g.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822055/Screenshot_2026-07-19_153936_woqli3.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822054/Screenshot_2026-07-19_154003_wj3vid.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822060/Screenshot_2026-07-19_153806_ebo82s.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822050/Screenshot_2026-07-19_153813_zr973v.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822049/Screenshot_2026-07-19_153820_jhiuyi.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153835_h3sa6w.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153846_ubqdm8.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822047/Screenshot_2026-07-19_153721_jq5ahp.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822051/Screenshot_2026-07-19_153732_f78vko.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822046/Screenshot_2026-07-19_153749_yezk9l.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822046/Screenshot_2026-07-19_153742_cpflgz.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1786822045/Screenshot_2026-07-19_154030_tafsnh.png"
+    ],
+    "featured": true,
+    "highlights": [
+      "Engineered a modular, typed section-based landing page builder (hero, stats, content, features, gallery, CTA) with reorder/enable/disable controls persisted as a typed union of MongoDB models.",
+      "Built a custom weighted SEO scoring engine (SeoAnalyzer) with 8 rule checkers (title, description, headings, keyword density, images, URL, content structure, readability) that scores and recommends fixes for both English and Arabic content.",
+      "Designed a bilingual-first data model with localized {en, ar} strings throughout, an RTL-aware frontend, and an aggregated analytics dashboard powered by MongoDB aggregation pipelines across 11 collections."
+    ],
+    "features": [
+      "Bilingual public site (English/Arabic) with next-intl i18n, locale routing, and RTL support",
+      "Project portfolio with gallery images/videos, floor plans, amenities, nearby places, partner logos, and location maps",
+      "Under-construction project pages with construction progress timelines and image sets",
+      "Previous projects showcase with reorderable item management",
+      "Admin dashboard with portfolio stats, donut/bar charts, recent activity, and quick actions",
+      "Drag-and-drop landing page builder with modular content sections and draft/publish workflow",
+      "Site settings manager for home, about, milestones, achievement video, footer, and page SEO",
+      "Integrated real-time SEO analyzer with weighted scores and actionable recommendations",
+      "Form submission management for project inquiries, landing page interest, careers (CV upload), and about-us contacts",
+      "JWT-based admin authentication with bcrypt password hashing and admin-only RBAC middleware"
+    ],
+    "challenges": [
+      "Modeling a flexible yet type-safe section-based page system: a discriminated union of section models (Hero, Stats, Content, Features, Gallery, CTA) with per-section props, ordering, and enabled flags on both the API and the client renderer.",
+      "Implementing a locale-aware weighted SEO analysis engine that evaluates content quality independently for English and Arabic, computing a live score from passed/total rule weights and surfacing severity-ranked issues in the editor.",
+      "Orchestrating a single aggregated dashboard endpoint that concurrently counts, trends, and snapshots data across 11 MongoDB collections using Promise.all and aggregation pipelines while keeping consistent response shapes for the charting UI."
+    ],
+    "architecture": "Next.js 16 App Router frontend with next-intl locale routing (en/ar) and RTL support, consuming an Express 5 REST API backed by MongoDB (native driver) for content with PostgreSQL via pg for relational data. JWT access tokens in httpOnly cookies with bcrypt hashing protect admin routes, Multer handles media/CV uploads served as static files, and Zod validates all payloads.",
+    "role": "Full-Stack Developer",
+    "links": {
+      "live": "",
+      "github": ""
     }
+  },
+  {
+    "id": "shopify-shippo-bridge",
+    "title": "Shopify–Shippo Bridge",
+    "category": "Shipping",
+    "summary": "A Shopify App that connects merchants' stores to the Shippo shipping API for automated order fulfillment, label purchasing, and shipment tracking.",
+    "description": "A full-stack Shopify App that bridges Shopify stores to the Shippo shipping platform. Merchants install the app via OAuth, and incoming Shopify orders are automatically ingested through webhooks. From there, the app handles the full fulfillment workflow: creating and validating addresses in Shippo, comparing shipping rates, purchasing labels, requesting carrier pickups, and syncing fulfillment status back to Shopify. A configurable shipping rules engine lets merchants automate rate selection based on order value, weight, or delivery window.",
+    "techStack": [
+      "TypeScript",
+      "Express",
+      "React",
+      "Vite",
+      "MongoDB",
+      "Mongoose",
+      "Redis",
+      "RabbitMQ",
+      "Redux Toolkit",
+      "React Router",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "JWT",
+      "Framer Motion",
+      "Axios"
+    ],
+    "coverImage": "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789332/Screenshot_2026-09-07_164922_vlbnpa.png",
+    "gallery": [
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215239_jbnfjk.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215249_dhqyus.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789334/Screenshot_2026-09-06_215257_sn4i96.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220243_k1mseq.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220249_czxjnv.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220254_fpyixn.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220258_awhlqo.png"
+    ],
+    "featured": true,
+    "highlights": [
+      "Shopify OAuth integration with JWT session management, httpOnly cookie auth, and automatic token refresh with request queuing",
+      "Automated order ingestion via Shopify webhooks that creates validated Shippo addresses and maps line items in a single pass",
+      "Bulk carrier pickup processing using RabbitMQ for background job queues with real-time progress streaming over SSE via Redis pub/sub",
+      "Shipping rules engine that evaluates prioritized conditions (order value, weight, always-apply) to auto-select the cheapest qualifying rate within a delivery window"
+    ],
+    "features": [
+      "Shopify OAuth app installation with scoped access and webhook registration",
+      "Automatic order ingestion from Shopify orders/create webhook with Shippo address validation",
+      "Shipment creation with Shippo rate comparison and label purchasing",
+      "Configurable shipping rules with prioritized conditions, max delivery days, and drag-to-reorder",
+      "Bulk pickup requests with background processing and live SSE progress updates",
+      "Address management with Shippo validation and local storage",
+      "Shipment tracking with status updates synced back to Shopify fulfillments",
+      "Dark/light theme with system preference detection"
+    ],
+    "challenges": [
+      "Coordinating asynchronous bulk pickup jobs across RabbitMQ, Redis pub/sub, and SSE streaming while handling partial failures gracefully",
+      "Mapping and syncing shipment tracking statuses between Shippo and Shopify's fulfillment system, including creating fulfillments and fulfillment events on demand",
+      "Designing the Shopify OAuth lifecycle with short-lived access tokens, long-lived refresh tokens, and a frontend interceptor that queues and retries requests on 401"
+    ],
+    "architecture": "React SPA frontend communicating with an Express backend, backed by MongoDB for persistence, Redis for pub/sub (SSE streaming), and RabbitMQ for background job processing. Integrates with Shopify's REST/GraphQL APIs and Shippo's REST API for shipping operations.",
+    "role": "Full-stack developer",
+    "links": {
+      "live": "https://app.bridge0.tech",
+      "github": "https://github.com/Yuossof/shopify-shippo-bridge-client"
+    }
+  }
 ]
