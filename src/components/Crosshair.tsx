@@ -15,6 +15,7 @@ const getMousePos = (e: Event, container?: HTMLElement | null): { x: number; y: 
   return { x: mouseEvent.clientX, y: mouseEvent.clientY };
 };
 
+
 interface CrosshairProps {
   color?: string;
   containerRef?: RefObject<HTMLElement | null>;
@@ -26,6 +27,7 @@ const Crosshair: React.FC<CrosshairProps> = ({ color = 'white', containerRef = n
   const lineVerticalRef = useRef<HTMLDivElement>(null);
   const filterXRef = useRef<SVGFETurbulenceElement>(null);
   const filterYRef = useRef<SVGFETurbulenceElement>(null);
+
 
   let mouse = { x: 0, y: 0 };
 
@@ -118,6 +120,7 @@ const Crosshair: React.FC<CrosshairProps> = ({ color = 'white', containerRef = n
     const render = () => {
       renderedStyles.tx.current = mouse.x;
       renderedStyles.ty.current = mouse.y;
+      
 
       for (const key in renderedStyles) {
         const style = renderedStyles[key];
@@ -178,7 +181,7 @@ const Crosshair: React.FC<CrosshairProps> = ({ color = 'white', containerRef = n
         className={`absolute h-full w-px pointer-events-none opacity-0 transform translate-x-1/2`}
         style={{ background: color }}
       ></div>
-    </div>
+    </div> 
   );
 };
 

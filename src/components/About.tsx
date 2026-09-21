@@ -260,7 +260,7 @@ const About = () => {
           {/* Social Links */}
           <div className="flex flex-wrap items-start gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Yuossof"
               target="_blank"
               rel="noopener noreferrer"
               className="about-social inline-flex items-center gap-2 px-4 py-2 border border-border text-sm rounded-full hover:bg-foreground hover:text-background transition-colors"
@@ -271,7 +271,7 @@ const About = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/youssof-ahmed-0839932a6/"
               target="_blank"
               rel="noopener noreferrer"
               className="about-social inline-flex items-center gap-2 px-4 py-2 border border-border text-sm rounded-full hover:bg-foreground hover:text-background transition-colors"
@@ -282,7 +282,7 @@ const About = () => {
               LinkedIn
             </a>
             <a
-              href="mailto:hello@johndoe.dev"
+              href="youssofwr@gmail.com"
               className="about-social inline-flex items-center gap-2 px-4 py-2 border border-border text-sm rounded-full hover:bg-foreground hover:text-background transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

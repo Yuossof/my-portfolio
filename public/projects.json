@@ -138,5 +138,68 @@
       "live": "https://app.bridge0.tech",
       "github": "https://github.com/Yuossof/shopify-shippo-bridge-client"
     }
+  },
+  {
+    "id": "markteer",
+    "title": "Markteer",
+    "category": "Marketing Agency",
+    "summary": "A marketing agency website and CMS for showcasing services, projects, career opportunities, and managing client inquiries.",
+    "description": "A full-stack website and content management system built for a digital marketing agency. The public website showcases the agency's services and portfolio, while visitors can explore projects, submit inquiries, apply for jobs, and subscribe to the newsletter. An admin dashboard gives the team control over website content, projects, services, jobs, offices, messages, and media.",
+    "techStack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+      "Jotai",
+      "Zod",
+      "JWT",
+      "Nodemailer",
+      "Resend",
+      "Framer Motion",
+      "GSAP",
+      "Tiptap"
+    ],
+    "coverImage": "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994132/ce5046d6-3094-49ab-af17-3e27e3058e72.png",
+    "gallery": [
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994003/Screenshot_2026-09-21_152940_p0k2mv.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994002/Screenshot_2026-09-21_152949_dv6zqi.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994002/Screenshot_2026-09-21_153002_gowxtp.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994002/Screenshot_2026-09-21_153011_dudaqi.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994003/Screenshot_2026-09-21_153023_aqjbqb.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994003/Screenshot_2026-09-21_153046_qfixkb.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994003/Screenshot_2026-09-21_153054_l7bnet.png",
+      "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994002/Screenshot_2026-09-21_153145_gxppam.png"
+    ],
+    "featured": false,
+    "highlights": [
+      "Full-stack CMS with a protected admin dashboard for managing the agency's website content and media.",
+      "Rich project showcase with service-based filtering, featured projects, related projects, galleries, and detailed project pages.",
+      "Centralized content management for services, projects, jobs, offices, newsletters, and client inquiries using PostgreSQL and Prisma.",
+      "Contact and career workflows that store submissions and trigger email notifications through external email services.",
+      "Performance-focused Next.js implementation using server-side data fetching, lazy loading, and optimized image handling."
+    ],
+    "features": [
+      "Service pages with detailed content and related portfolio projects.",
+      "Portfolio browsing with service filters, search, featured projects, and project detail pages.",
+      "Rich project pages with galleries, client information, and formatted content.",
+      "Career section with office and job listings and online applications.",
+      "Contact form for client inquiries with admin message management.",
+      "Newsletter subscription and promotional spotlight content.",
+      "Protected admin CMS for managing services, projects, jobs, offices, newsletters, messages, and media."
+    ],
+    "challenges": [
+      "Designing a flexible CMS structure that supports different types of agency content while keeping the public website and admin dashboard consistent.",
+      "Managing media-heavy project content, including image uploads, ordering, galleries, and project relationships.",
+      "Implementing protected admin routes and APIs while keeping the public website accessible without authentication.",
+      "Handling contact submissions reliably by storing messages independently from external email delivery."
+    ],
+    "architecture": "A Next.js full-stack application using PostgreSQL and Prisma for data persistence. Public pages and admin interfaces share the same application, with protected admin routes secured through JWT authentication and middleware. API route handlers manage content, submissions, and uploads, while external email services handle notifications and communication workflows.",
+    "role": "Full-stack developer",
+    "links": {
+      "live": "",
+      "github": ""
+    }
   }
 ]

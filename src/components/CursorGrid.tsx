@@ -143,6 +143,7 @@ const CursorGrid = ({
     // configured falloff curve mapping distance to brightness.
     const energize = (x: number, y: number, boost?: number) => {
       const p = propsRef.current;
+
       const r = Math.max(p.radius, 1);
       const ease = FALLOFF_CURVES[p.falloff] ?? FALLOFF_CURVES.linear;
       const now = performance.now();
