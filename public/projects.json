@@ -172,7 +172,7 @@
       "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994003/Screenshot_2026-09-21_153054_l7bnet.png",
       "https://res.cloudinary.com/dnf0l0893/image/upload/v1789994002/Screenshot_2026-09-21_153145_gxppam.png"
     ],
-    "featured": false,
+    "featured": true,
     "highlights": [
       "Full-stack CMS with a protected admin dashboard for managing the agency's website content and media.",
       "Rich project showcase with service-based filtering, featured projects, related projects, galleries, and detailed project pages.",
