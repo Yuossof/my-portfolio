@@ -77,69 +77,6 @@
     }
   },
   {
-    "id": "shopify-shippo-bridge",
-    "title": "Shopify–Shippo Bridge",
-    "category": "Shipping",
-    "summary": "A Shopify App that connects merchants' stores to the Shippo shipping API for automated order fulfillment, label purchasing, and shipment tracking.",
-    "description": "A full-stack Shopify App that bridges Shopify stores to the Shippo shipping platform. Merchants install the app via OAuth, and incoming Shopify orders are automatically ingested through webhooks. From there, the app handles the full fulfillment workflow: creating and validating addresses in Shippo, comparing shipping rates, purchasing labels, requesting carrier pickups, and syncing fulfillment status back to Shopify. A configurable shipping rules engine lets merchants automate rate selection based on order value, weight, or delivery window.",
-    "techStack": [
-      "TypeScript",
-      "Express",
-      "React",
-      "Vite",
-      "MongoDB",
-      "Mongoose",
-      "Redis",
-      "RabbitMQ",
-      "Redux Toolkit",
-      "React Router",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Zod",
-      "JWT",
-      "Framer Motion",
-      "Axios"
-    ],
-    "coverImage": "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789332/Screenshot_2026-09-07_164922_vlbnpa.png",
-    "gallery": [
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215239_jbnfjk.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215249_dhqyus.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789334/Screenshot_2026-09-06_215257_sn4i96.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220243_k1mseq.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220249_czxjnv.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220254_fpyixn.png",
-      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220258_awhlqo.png"
-    ],
-    "featured": true,
-    "highlights": [
-      "Shopify OAuth integration with JWT session management, httpOnly cookie auth, and automatic token refresh with request queuing",
-      "Automated order ingestion via Shopify webhooks that creates validated Shippo addresses and maps line items in a single pass",
-      "Bulk carrier pickup processing using RabbitMQ for background job queues with real-time progress streaming over SSE via Redis pub/sub",
-      "Shipping rules engine that evaluates prioritized conditions (order value, weight, always-apply) to auto-select the cheapest qualifying rate within a delivery window"
-    ],
-    "features": [
-      "Shopify OAuth app installation with scoped access and webhook registration",
-      "Automatic order ingestion from Shopify orders/create webhook with Shippo address validation",
-      "Shipment creation with Shippo rate comparison and label purchasing",
-      "Configurable shipping rules with prioritized conditions, max delivery days, and drag-to-reorder",
-      "Bulk pickup requests with background processing and live SSE progress updates",
-      "Address management with Shippo validation and local storage",
-      "Shipment tracking with status updates synced back to Shopify fulfillments",
-      "Dark/light theme with system preference detection"
-    ],
-    "challenges": [
-      "Coordinating asynchronous bulk pickup jobs across RabbitMQ, Redis pub/sub, and SSE streaming while handling partial failures gracefully",
-      "Mapping and syncing shipment tracking statuses between Shippo and Shopify's fulfillment system, including creating fulfillments and fulfillment events on demand",
-      "Designing the Shopify OAuth lifecycle with short-lived access tokens, long-lived refresh tokens, and a frontend interceptor that queues and retries requests on 401"
-    ],
-    "architecture": "React SPA frontend communicating with an Express backend, backed by MongoDB for persistence, Redis for pub/sub (SSE streaming), and RabbitMQ for background job processing. Integrates with Shopify's REST/GraphQL APIs and Shippo's REST API for shipping operations.",
-    "role": "Full-stack developer",
-    "links": {
-      "live": "https://app.bridge0.tech",
-      "github": "https://github.com/Yuossof/shopify-shippo-bridge-client"
-    }
-  },
-  {
     "id": "e-commerce-platform",
     "title": "E-Commerce",
     "category": "Full-Stack E-Commerce",
@@ -233,6 +170,69 @@
     "links": {
       "live": "",
       "github": ""
+    }
+  },
+  {
+    "id": "shopify-shippo-bridge",
+    "title": "Shopify–Shippo Bridge",
+    "category": "Shipping",
+    "summary": "A Shopify App that connects merchants' stores to the Shippo shipping API for automated order fulfillment, label purchasing, and shipment tracking.",
+    "description": "A full-stack Shopify App that bridges Shopify stores to the Shippo shipping platform. Merchants install the app via OAuth, and incoming Shopify orders are automatically ingested through webhooks. From there, the app handles the full fulfillment workflow: creating and validating addresses in Shippo, comparing shipping rates, purchasing labels, requesting carrier pickups, and syncing fulfillment status back to Shopify. A configurable shipping rules engine lets merchants automate rate selection based on order value, weight, or delivery window.",
+    "techStack": [
+      "TypeScript",
+      "Express",
+      "React",
+      "Vite",
+      "MongoDB",
+      "Mongoose",
+      "Redis",
+      "RabbitMQ",
+      "Redux Toolkit",
+      "React Router",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "JWT",
+      "Framer Motion",
+      "Axios"
+    ],
+    "coverImage": "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789332/Screenshot_2026-09-07_164922_vlbnpa.png",
+    "gallery": [
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215239_jbnfjk.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789333/Screenshot_2026-09-06_215249_dhqyus.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789334/Screenshot_2026-09-06_215257_sn4i96.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220243_k1mseq.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220249_czxjnv.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220254_fpyixn.png",
+      "https://res.cloudinary.com/dx9rie3vv/image/upload/v1788789331/Screenshot_2026-09-06_220258_awhlqo.png"
+    ],
+    "featured": true,
+    "highlights": [
+      "Shopify OAuth integration with JWT session management, httpOnly cookie auth, and automatic token refresh with request queuing",
+      "Automated order ingestion via Shopify webhooks that creates validated Shippo addresses and maps line items in a single pass",
+      "Bulk carrier pickup processing using RabbitMQ for background job queues with real-time progress streaming over SSE via Redis pub/sub",
+      "Shipping rules engine that evaluates prioritized conditions (order value, weight, always-apply) to auto-select the cheapest qualifying rate within a delivery window"
+    ],
+    "features": [
+      "Shopify OAuth app installation with scoped access and webhook registration",
+      "Automatic order ingestion from Shopify orders/create webhook with Shippo address validation",
+      "Shipment creation with Shippo rate comparison and label purchasing",
+      "Configurable shipping rules with prioritized conditions, max delivery days, and drag-to-reorder",
+      "Bulk pickup requests with background processing and live SSE progress updates",
+      "Address management with Shippo validation and local storage",
+      "Shipment tracking with status updates synced back to Shopify fulfillments",
+      "Dark/light theme with system preference detection"
+    ],
+    "challenges": [
+      "Coordinating asynchronous bulk pickup jobs across RabbitMQ, Redis pub/sub, and SSE streaming while handling partial failures gracefully",
+      "Mapping and syncing shipment tracking statuses between Shippo and Shopify's fulfillment system, including creating fulfillments and fulfillment events on demand",
+      "Designing the Shopify OAuth lifecycle with short-lived access tokens, long-lived refresh tokens, and a frontend interceptor that queues and retries requests on 401"
+    ],
+    "architecture": "React SPA frontend communicating with an Express backend, backed by MongoDB for persistence, Redis for pub/sub (SSE streaming), and RabbitMQ for background job processing. Integrates with Shopify's REST/GraphQL APIs and Shippo's REST API for shipping operations.",
+    "role": "Full-stack developer",
+    "links": {
+      "live": "https://app.bridge0.tech",
+      "github": "https://github.com/Yuossof/shopify-shippo-bridge-client"
     }
   },
   {
